@@ -32,7 +32,7 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 font-['Noto_Sans_KR']">
-        <!-- 네비게이션 바 -->
+    <!-- 네비게이션 바 -->
     <header class="bg-white shadow-sm fixed w-full top-0 z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16">
@@ -75,9 +75,25 @@
             </div>
         </div>
     </header>
-    
-<!-- 메인 이미지 섹션 -->
-        <div class="bg-yellow-100 rounded-xl p-8 mb-16">
+
+    <!-- 메인 컨텐츠 -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+        <!-- 메인 이미지 섹션 (데스크탑) -->
+        <div class="hidden md:block bg-yellow-100 rounded-xl mb-16 overflow-hidden relative h-[500px]">
+            <div class="absolute inset-0 bg-cover bg-center" 
+                 style="background-image: url('https://drivemoments.kr/wp-content/uploads/2025/02/%EB%85%B8%EB%9E%91-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98-%EC%B2%AD%EB%85%84%EC%9D%98%EB%82%A0-%EC%9D%B8%EC%8A%A4%ED%83%80%EA%B7%B8%EB%9E%A8-%EA%B2%8C%EC%8B%9C%EB%AC%BC.png');">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-yellow-100/90 to-yellow-100/70"></div>
+            <div class="relative z-10 container mx-auto px-8 py-16">
+                <div class="max-w-xl">
+                    <h3 class="text-3xl font-bold mb-4">복지 맞춤형 안내</h3>
+                    <p class="text-gray-700 text-lg mb-8">지금 바로 신청해보세요!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메인 이미지 섹션 (모바일) -->
+        <div class="md:hidden bg-yellow-100 rounded-xl p-8 mb-16">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-6 md:mb-0 pr-8">
                     <h3 class="text-2xl font-bold mb-4">복지 맞춤형 안내</h3>
@@ -100,7 +116,7 @@
         </div>
 
         <!-- 히어로 섹션 -->
-        <section class="text-left mb-16">
+        <section class="text-center mb-16 max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold text-gray-800 mb-6">
                 청년 월세 지원<br>
                 <span class="text-blue-600">원스톱 가이드</span>
@@ -111,18 +127,28 @@
             </p>
         </section>
 
- <!-- 검색 필터 -->
-        <div class="bg-white rounded-lg shadow-md p-4 mb-16">
+        <!-- 검색 필터 -->
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl shadow-lg p-8 mb-16">
+            <h3 class="text-white text-xl font-bold mb-4">원하시는 정보를 검색해보세요</h3>
             <form action="https://2030home.tistory.com/search" method="get" class="flex gap-4">
                 <input type="text" name="q" placeholder="검색어를 입력하세요" 
-                       class="flex-1 p-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-                    검색
+                       class="flex-1 p-4 rounded-lg border-2 border-white/20 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white">
+                <button type="submit" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 font-bold">
+                    검색하기
                 </button>
             </form>
         </div>
-    
-    <!-- 주요 정보 카드 -->
+
+        <!-- FAQ 100 섹션 -->
+        <div class="bg-blue-600 text-white rounded-xl p-8 mb-16">
+            <h3 class="text-2xl font-bold mb-4">FAQ 100</h3>
+            <p class="mb-4">가장 자주 묻는 100가지 질문과 답변을 모았습니다</p>
+            <a href="https://2030home.tistory.com/faq" class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-gray-100">
+                전체보기 →
+            </a>
+        </div>
+
+        <!-- 주요 정보 카드 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <!-- 지원 대상 카드 -->
             <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
@@ -136,7 +162,7 @@
                 </a>
             </div>
 
-  <!-- 지원 금액 카드 -->
+            <!-- 지원 금액 카드 -->
             <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
                 <div class="flex items-center mb-4">
                     <i class="ph-money-fill text-3xl text-blue-600"></i>
@@ -148,7 +174,7 @@
                 </a>
             </div>
 
- <!-- 신청 방법 카드 -->
+            <!-- 신청 방법 카드 -->
             <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
                 <div class="flex items-center mb-4">
                     <i class="ph-file-text-fill text-3xl text-blue-600"></i>
@@ -161,76 +187,54 @@
             </div>
         </div>
 
- <!-- 원룸 꿀팁 섹션 위에 추가할 새로운 섹션 -->
+        <!-- 주요 체크포인트 섹션 -->
         <section class="bg-white rounded-xl shadow-lg p-8 mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">주요 체크포인트</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 자격 체크리스트 -->
-                <div class="bg-gray-50 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-check-circle-fill text-2xl text-green-600"></i>
-                        <h4 class="text-xl font-bold ml-3">필수 자격 요건</h4>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• 무주택 세대구성원</li>
-                        <li>• 보증금 1억원 이하, 월세 60만원 이하</li>
-                        <li>• 임대차계약서 필수</li>
-                        <li>• 본인 명의 계약 필수</li>
-                    </ul>
-                </div>
-
-  <!-- 준비 서류 -->
-                <div class="bg-gray-50 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-files-fill text-2xl text-blue-600"></i>
-                        <h4 class="text-xl font-bold ml-3">준비 서류</h4>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• 임대차계약서</li>
-                        <li>• 신분증</li>
-                        <li>• 주민등록등본</li>
-                        <li>• 계좌정보</li>
-                    </ul>
-                </div>
-
- <!-- 제외 대상 -->
-                <div class="bg-gray-50 rounded-lg p-6">
-                    <div class="flex items-center mb-4">
-                        <i class="ph-prohibit-fill text-2xl text-red-600"></i>
-                        <h4 class="text-xl font-bold ml-3">지원 제외 대상</h4>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• 공공임대주택 거주자</li>
-                        <li>• 주택소유자</li>
-                        <li>• 일정 소득 초과자</li>
-                        <li>• 기타 주거지원 수혜자</li>
-                    </ul>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">주요 체크포인트</h3>
+                <div class="flex gap-4">
+                    <a href="https://2030home.tistory.com/docs" class="text-blue-600 hover:text-blue-700">서류 다운로드 →</a>
+                    <a href="https://2030home.tistory.com/local" class="text-blue-600 hover:text-blue-700">지역별 지원금액 →</a>
                 </div>
             </div>
-        </section>
-
-<!-- 원룸 꿀팁 섹션 -->
-        <section class="bg-white rounded-xl shadow-lg p-8">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-800">원룸 생활 꿀팁</h3>
-                <a href="https://2030home.tistory.com/entry/%EC%9B%90%EB%A3%B8-%ED%95%84%EC%88%98%ED%85%9C-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-TOP-10" 
-                   class="text-blue-600 hover:text-blue-700">
-                    더보기 →
+            <div class="mt-8 text-center">
+                <a href="https://2030home.tistory.com/details" 
+                   class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    상세 지원 요건 확인하기
                 </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-4 bg-gray-50 rounded-lg">
-                    <i class="ph-lamp-fill text-2xl text-blue-600 mb-2"></i>
-                    <h4 class="font-bold mb-2">조명 활용법</h4>
-                    <p class="text-gray-600 text-sm">작은 공간을 더 넓어 보이게</p>
+        </section>
+
+        <!-- 원룸 꿀팁 섹션 -->
+        <section class="bg-white rounded-xl shadow-lg p-8 overflow-hidden relative">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10"
+                 style="background-image: url('https://drivemoments.kr/wp-content/uploads/2025/02/room-tips-bg.jpg');">
+            </div>
+            <div class="relative z-10">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">원룸 생활 꿀팁</h3>
+                    <a href="https://2030home.tistory.com/entry/%EC%9B%90%EB%A3%B8-%ED%95%84%EC%88%98%ED%85%9C-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-TOP-10" 
+                       class="text-blue-600 hover:text-blue-700">
+                        더보기 →
+                    </a>
                 </div>
-                <!-- 추가 꿀팁 카드들... -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <i class="ph-lamp-fill text-2xl text-blue-600 mb-2"></i>
+                        <h4 class="font-bold mb-2">조명 활용법</h4>
+                        <p class="text-gray-600 text-sm">작은 공간을 더 넓어 보이게</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-<!-- 자주 묻는 질문 섹션 -->
+        <!-- 자주 묻는 질문 섹션 -->
         <section class="bg-white rounded-xl shadow-lg p-8 mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">자주 묻는 질문</h3>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">자주 묻는 질문</h3>
+                <a href="https://2030home.tistory.com/ask" class="text-blue-600 hover:text-blue-700">
+                    FAQ 무엇이든 물어보세요 →
+                </a>
+            </div>
             <div class="space-y-4">
                 <div class="border-b border-gray-200 pb-4">
                     <h4 class="font-bold text-lg mb-2">Q. 전세도 지원되나요?</h4>
@@ -247,7 +251,7 @@
             </div>
         </section>
 
-<!-- 관련 정보 섹션 -->
+        <!-- 관련 정보 섹션 -->
         <section class="bg-white rounded-xl shadow-lg p-8 mb-16">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">함께 확인하면 좋은 정보</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -264,24 +268,15 @@
                     <p class="text-gray-600 text-sm">시세 60-80% 수준 임대</p>
                 </a>
             </div>
-   </section>
-   </main>
-    
-  <!-- 푸터 -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h4 class="font-bold text-lg mb-2">2030 꿀보금자리</h4>
-                    <p class="text-gray-400 text-sm">청년들의 주거 안정을 위한 종합 정보 플랫폼</p>
-                </div>
-                <div class="text-gray-400 text-sm">
-                    &copy; 2025년 2030 꿀보금자리. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>   
+        </section>
+    </main>
 
-   
+    <script>
+        // 모바일 메뉴 토글
+        $('#mobileMenuButton').click(function(e) {
+            e.preventDefault();
+            $('#mobileMenu').toggleClass('hidden');
+        });
+    </script>
+</body>
+</html> 
