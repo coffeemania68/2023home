@@ -5,69 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2030 꿀보금자리: 청년 월세 지원 정보</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 font-['Noto_Sans_KR']">
+    <!-- 네비게이션 바 -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="ph-house-fill text-2xl text-blue-600"></i>
+                    <h1 class="text-xl font-bold text-gray-800">2030 꿀보금자리</h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">개요</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">지원 대상</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">지원 내용</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">신청 절차</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">FAQ</a>
+                </nav>
 
-    <header class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">2030 꿀보금자리</h1>
-            <nav class="hidden md:flex space-x-4">
-                <a href="#" class="hover:text-blue-200">개요</a>
-                <a href="#" class="hover:text-blue-200">지원 대상</a>
-                <a href="#" class="hover:text-blue-200">지원 내용</a>
-                <a href="#" class="hover:text-blue-200">신청 절차</a>
-                <a href="#" class="hover:text-blue-200">소득/재산 조사</a>
-                <a href="#" class="hover:text-blue-200">변경 및 중지</a>
-                <a href="#" class="hover:text-blue-200">환수</a>
-                <a href="#" class="hover:text-blue-200">이의신청</a>
-                <a href="#" class="hover:text-blue-200">Q&A</a>
-                <a href="#" class="hover:text-blue-200">참고자료</a>
-				<a href="https://2030home.tistory.com/entry/%EC%9B%90%EB%A3%B8-%ED%95%84%EC%88%98%ED%85%9C-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-TOP-10" class="hover:text-blue-200">원룸 추천템</a>
-            </nav>
-            <button class="md:hidden bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                메뉴
-            </button>
+                <button class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <i class="ph-list text-2xl text-gray-600"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main class="container mx-auto py-8">
-        <section class="bg-white p-8 rounded-lg shadow-md">
-			<div class="text-center">
-                <h2 class="text-3xl font-bold mb-4">2025년 청년 월세 지원, 모든 것을 한눈에!</h2>
-                <p class="text-gray-700 text-lg mb-8">
-                    청년들의 주거 안정을 위한 2025년 청년 월세 지원 정책에 대한 종합 안내 페이지입니다. 지원 대상, 지원 내용, 신청 절차, 자주 묻는 질문 등을 간결하고 명확하게 정리하여 제공합니다.
-                </p>
-				
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div class="bg-gray-50 p-6 rounded-lg shadow-md">
-						<h3 class="text-xl font-semibold mb-4">빠른 링크</h3>
-						<ul class="list-disc space-y-2">
-							<li><a href="https://2030home.tistory.com/1" class="text-blue-500 hover:underline">1. 개요</a></li>
-							<li><a href="https://2030home.tistory.com/2" class="text-blue-500 hover:underline">2. 지원 대상 및 자격 요건</a></li>
-							<li><a href="https://2030home.tistory.com/3" class="text-blue-500 hover:underline">3. 지원 내용 및 지급 방식</a></li>
-							<li><a href="https://2030home.tistory.com/4" class="text-blue-500 hover:underline">4. 신청 절차 및 방법</a></li>
-							<li><a href="https://2030home.tistory.com/5" class="text-blue-500 hover:underline">5. 소득 및 재산 조사</a></li>
-							<li><a href="https://2030home.tistory.com/6" class="text-blue-500 hover:underline">6. 변경 및 중지</a></li>
-							<li><a href="https://2030home.tistory.com/7" class="text-blue-500 hover:underline">7. 환수</a></li>
-							<li><a href="https://2030home.tistory.com/8" class="text-blue-500 hover:underline">8. 이의신청</a></li>
-							<li><a href="https://2030home.tistory.com/9" class="text-blue-500 hover:underline">9. 자주 묻는 질문 (FAQ)</a></li>
-							<li><a href="https://2030home.tistory.com/10" class="text-blue-500 hover:underline">10. 추가 정보</a></li>
-						</ul>
-					</div>
-					<div class="bg-gray-50 p-6 rounded-lg shadow-md">
-					<h3 class="text-xl font-semibold mb-4">원룸 꿀팁</h3>
-					<p class="text-gray-700">원룸 생활을 더욱 편리하고 효율적으로 만들어 줄 팁들을 모았습니다.</p>
-					<a href="https://2030home.tistory.com/entry/%EC%9B%90%EB%A3%B8-%ED%95%84%EC%88%98%ED%85%9C-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-TOP-10" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">원룸 추천템 TOP 10</a>
-					</div>
-				</div>
-			</div>
+    <!-- 메인 컨텐츠 -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+        <!-- 히어로 섹션 -->
+        <section class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                2025년 청년 월세 지원
+                <span class="text-blue-600">원스톱 가이드</span>
+            </h2>
+            <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+                복잡한 청년 월세 지원 정책, 한눈에 쉽게 이해하고 신청하세요.
+                모든 정보를 깔끔하게 정리했습니다.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg">
+                    지원 자격 확인하기
+                </a>
+                <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg border border-blue-600">
+                    신청 방법 보기
+                </a>
+            </div>
+        </section>
 
+        <!-- 주요 정보 카드 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- 지원 대상 카드 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+                <div class="flex items-center mb-4">
+                    <i class="ph-users-four-fill text-3xl text-blue-600"></i>
+                    <h3 class="text-xl font-bold ml-3">지원 대상</h3>
+                </div>
+                <p class="text-gray-600">만 19-34세 청년 중 원가구 소득 기준중위소득 100% 이하</p>
+                <a href="#" class="inline-block mt-4 text-blue-600 hover:text-blue-700">
+                    자세히 보기 →
+                </a>
+            </div>
+
+            <!-- 지원 금액 카드 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+                <div class="flex items-center mb-4">
+                    <i class="ph-money-fill text-3xl text-blue-600"></i>
+                    <h3 class="text-xl font-bold ml-3">지원 금액</h3>
+                </div>
+                <p class="text-gray-600">월 최대 20만원, 12개월간 지원</p>
+                <a href="#" class="inline-block mt-4 text-blue-600 hover:text-blue-700">
+                    자세히 보기 →
+                </a>
+            </div>
+
+            <!-- 신청 방법 카드 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
+                <div class="flex items-center mb-4">
+                    <i class="ph-file-text-fill text-3xl text-blue-600"></i>
+                    <h3 class="text-xl font-bold ml-3">신청 방법</h3>
+                </div>
+                <p class="text-gray-600">복지로 웹사이트 또는 모바일 앱에서 신청</p>
+                <a href="#" class="inline-block mt-4 text-blue-600 hover:text-blue-700">
+                    자세히 보기 →
+                </a>
+            </div>
+        </div>
+
+        <!-- 원룸 꿀팁 섹션 -->
+        <section class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">원룸 생활 꿀팁</h3>
+                <a href="https://2030home.tistory.com/entry/%EC%9B%90%EB%A3%B8-%ED%95%84%EC%88%98%ED%85%9C-%EC%B6%94%EC%B2%9C-%EA%B0%80%EC%9D%B4%EB%93%9C-TOP-10" 
+                   class="text-blue-600 hover:text-blue-700">
+                    더보기 →
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <i class="ph-lamp-fill text-2xl text-blue-600 mb-2"></i>
+                    <h4 class="font-bold mb-2">조명 활용법</h4>
+                    <p class="text-gray-600 text-sm">작은 공간을 더 넓어 보이게</p>
+                </div>
+                <!-- 추가 꿀팁 카드들... -->
+            </div>
         </section>
     </main>
 
-    <footer class="bg-blue-500 text-white py-4">
-        <div class="container mx-auto text-center">
-            <p>© 2024 2030 꿀보금자리. All rights reserved.</p>
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h4 class="font-bold text-lg mb-2">2030 꿀보금자리</h4>
+                    <p class="text-gray-400 text-sm">청년들의 주거 안정을 위한 종합 정보 플랫폼</p>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2024 2030 꿀보금자리. All rights reserved.
+                </div>
+            </div>
         </div>
     </footer>
 </body>
