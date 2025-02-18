@@ -241,7 +241,7 @@
         <!-- 원룸 꿀팁 섹션 -->
         <section class="bg-white rounded-xl shadow-lg p-8 overflow-hidden relative">
             <div class="absolute inset-0 bg-cover bg-center opacity-10"
-                 style="background-image: url('https://drivemoments.kr/wp-content/uploads/2025/02/%EC%B2%AD%EB%85%84%EC%9B%94%EC%84%B8-%EC%A7%80%EC%9B%90.png');">
+                 style="background-image: url('https://drivemoments.kr/wp-content/uploads/2025/02/room-tips-bg.jpg');">
             </div>
             <div class="relative z-10">
                 <div class="flex justify-between items-center mb-6">
@@ -305,14 +305,41 @@
         </section>
     </main>
 
+    <div>
+        <h2>나이 계산기</h2>
+        <label for="birthdate">생년월일을 입력하세요:</label>
+        <input type="date" id="birthdate">
+        <button onclick="calculateAge()">나이 계산</button>
+        <p id="result"></p>
+    </div>
+
     <script>
         // 모바일 메뉴 토글
         $('#mobileMenuButton').click(function(e) {
             e.preventDefault();
             $('#mobileMenu').toggleClass('hidden');
         });
+
+        function calculateAge() {
+            const birthdate = document.getElementById('birthdate').value;
+            if (!birthdate) {
+                document.getElementById('result').innerText = '생년월일을 입력하세요.';
+                return;
+            }
+
+            const birthDate = new Date(birthdate);
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            document.getElementById('result').innerText = `당신의 나이는 ${age}세입니다.`;
+        }
     </script>
-    <!-- 푸터 -->
+      <!-- 푸터 -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
