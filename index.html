@@ -213,6 +213,14 @@
                 </a>
             </div>
 
+             <!-- 나이 계산기 -->
+            <div class="bg-yellow-100 rounded-xl shadow-lg p-6 mt-8">
+                <h2 class="text-2xl font-bold mb-4">나이 계산기</h2>
+                <label for="birthdate" class="block mb-2">생년월일을 입력하세요:</label>
+                <input type="date" id="birthdate" class="p-2 border rounded" onchange="calculateAge()">
+                <p id="result" class="mt-4 text-lg font-semibold"></p>
+            </div>
+            
             <!-- 지원 금액 카드 -->
             <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
                 <div class="flex items-center mb-4">
@@ -304,14 +312,6 @@
             </div>
         </section>
     </main>
-
-    <div>
-        <h2>나이 계산기</h2>
-        <label for="birthdate">생년월일을 입력하세요:</label>
-        <input type="date" id="birthdate">
-        <button onclick="calculateAge()">나이 계산</button>
-        <p id="result"></p>
-    </div>
 
     <script>
         // 모바일 메뉴 토글
